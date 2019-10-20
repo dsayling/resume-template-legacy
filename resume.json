@@ -1,24 +1,41 @@
 {
   "basics": {
-    "name": "John Doe",
-    "label": "Programmer",
-    "picture": "",
-    "email": "john@gmail.com",
-    "phone": "(912) 555-4321",
-    "website": "http://johndoe.com",
-    "summary": "A summary of John Doe...",
+    "name": "Drew Ayling",
+    "label": "Developer. Tester. Entrepreneur. Tech Guy.",
+    "picture": "avatar.jpg",
+    "email": "dsayling@gmail.com",
+    "phone": "+1 210-570-6481",
+    "website": "https://www.ayling.xyz",
+    "summary": "Linux/Windows/macOS. Python and Bash Developer that used to dabble in C++, Perl and JS. DevOps for the enterprise and for the developer. Believer in delivering value to customers, whether internal or external. I love spending my days helping people. ",
     "location": {
-      "address": "2712 Broadway St",
-      "postalCode": "CA 94115",
-      "city": "San Francisco",
+      "address": "Pearl Street",
+      "postalCode": "CO 80301",
+      "city": "Boulder",
       "countryCode": "US",
-      "region": "California"
+      "region": "Colorado"
     },
-    "profiles": [{
-      "network": "Twitter",
-      "username": "john",
-      "url": "http://twitter.com/john"
-    }]
+    "profiles": [
+      {
+        "network": "Twitter",
+        "username": "dsayling",
+        "url": "https://twitter.com/dsayling"
+      },
+      {
+        "network": "GitHub",
+        "username": "dsayling",
+        "url": "https://github.com/dsayling"
+      },
+      {
+         "network": "Facebook",
+        "username": "drew.ayling",
+        "url": "https://www.facebook.com/drew.ayling"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "Drew Ayling",
+        "url": "https://www.linkedin.com/in/dsayling"
+      }
+    ]
   },
   "work": [{
     "company": "Company",
@@ -67,13 +84,18 @@
     "summary": "Description..."
   }],
   "skills": [{
-    "name": "Web Development",
-    "level": "Master",
-    "keywords": [
-      "HTML",
-      "CSS",
-      "Javascript"
-    ]
+    "name": "Development",
+    "level": "Well enough",
+      "keywords": [
+        "Python, C++, Bash",
+        "Linux, OSX",
+        "Docker",
+        "Saltstack, Ansible, CloudFormation",
+        "DevOps",
+        "Kubernetes",
+        "VMWare/ESX, Hyper-V, Parallels",
+        "Continuous Integration/Deployment, Jenkins, TravisCI, GitLab CI"
+      ]
   }],
   "languages": [{
     "language": "English",
