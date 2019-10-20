@@ -1,4 +1,4 @@
-language: node_js
+language: minimal
 services:
         - docker
 
@@ -7,8 +7,6 @@ before_install:
         - docker create -ti --name dummy mynode bash
         - docker cp dummy:/build/index.html index.html
         - docker rm -f dummy
-
-script: ls
 
 deploy:
         provider: pages
