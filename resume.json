@@ -6,7 +6,7 @@
     "email": "dsayling@gmail.com",
     "phone": "+1 210-570-6481",
     "website": "https://www.ayling.xyz",
-    "summary": "Linux/Windows/macOS. Python and Bash Developer that used to dabble in C++, Perl and JS. DevOps for the enterprise and for the developer. Believer in delivering value to customers, whether internal or external. I love spending my days helping people. ",
+    "summary": "Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in DevOps, Software Architecture, Automated Software Testing, Software Delivery, and Compliance Testing. Core values in product focused delivery and bridging communication gaps between development, quality, release, and support in Enterprise agile environments. Likes the fell of startups. macOS/Linux guy that runs WSL if I must. Python Developer that used to dabble in C++, Perl, and JS. DevOps is for the enterprise and for the developer. Believer in delivering value to customers, whether internal or external. I love spending my days helping people.",
     "location": {
       "address": "Pearl Street",
       "postalCode": "CO 80301",
@@ -15,11 +15,6 @@
       "region": "Colorado"
     },
     "profiles": [
-      {
-        "network": "Twitter",
-        "username": "dsayling",
-        "url": "https://twitter.com/dsayling"
-      },
       {
         "network": "GitHub",
         "username": "dsayling",
@@ -38,14 +33,16 @@
     ]
   },
   "work": [{
-    "company": "Company",
-    "position": "President",
-    "website": "http://company.com",
-    "startDate": "2013-01-01",
-    "endDate": "2014-01-01",
-    "summary": "Description...",
+    "company": "NetApp - SolidFire",
+    "position": "DevOps Architect, System Architect, SDET,",
+    "website": "http://netapp.com",
+    "startDate": "2015-07-15",
+    "summary": "Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise.",
     "highlights": [
-      "Started the company"
+      "Led team to testing metadata expansion feature in storage product",
+      "Architected new value focused test framework in pure python", 
+      "System Architect helped rollout SAFe",
+      "DevOps Architect reduced circular 18hr build time to 4hrs"
     ]
   }],
   "volunteer": [{
@@ -60,29 +57,16 @@
     ]
   }],
   "education": [{
-    "institution": "University",
-    "area": "Software Development",
+    "institution": "Texas Tech University",
+    "area": "Electrical Engineering",
     "studyType": "Bachelor",
-    "startDate": "2011-01-01",
-    "endDate": "2013-01-01",
-    "gpa": "4.0",
+    "endDate": "2012-05-08",
+    "gpa": "3.8",
     "courses": [
-      "DB1101 - Basic SQL"
     ]
   }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "website": "http://publication.com",
-    "summary": "Description..."
-  }],
+  "awards": [],
+  "publications": [],
   "skills": [{
     "name": "Development",
     "level": "Well enough",
@@ -102,14 +86,10 @@
     "fluency": "Native speaker"
   }],
   "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
+    "name": "Hiking"
   }],
   "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference..."
+    "name": "Doyle Dennis",
+    "reference": "..."
   }]
 }
