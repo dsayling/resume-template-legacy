@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Drew Ayling",
-    "label": "Developer. Tester. Entrepreneur. Tech Guy.",
+    "label": "DevOps Connoissuer, Python Monkey, System Architect",
     "picture": "avatar.jpg",
     "email": "dsayling@gmail.com",
     "phone": "+1 210-570-6481",
@@ -21,11 +21,6 @@
         "url": "https://github.com/dsayling"
       },
       {
-         "network": "Facebook",
-        "username": "drew.ayling",
-        "url": "https://www.facebook.com/drew.ayling"
-      },
-      {
         "network": "LinkedIn",
         "username": "Drew Ayling",
         "url": "https://www.linkedin.com/in/drew-ayling"
@@ -34,26 +29,85 @@
   },
   "work": [{
     "company": "NetApp - SolidFire",
-    "position": "DevOps Architect, System Architect, SDET,",
-    "website": "http://netapp.com",
+    "position": "Sr. Software Engineer",
+    "website": "http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx",
+    "startDate": "2019-06-15",
+    "summary": "Currently DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect",
+    "highlights": [
+      "Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.",
+      "Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.",
+      "Architected end to end container and Kubernetes based serverless testing solution for disparate disconnected system tests that removed hundreds of manual hours for each release.",
+      "Coached other system architects in scaled agile best practices to enable predictable planning by reducing lead time in exploration phase by 75%.",
+      "Architected organizational value stream alignment with other system architects and SAFe practitioners to restructure the teams around value in order to increase delivery to the customer by a factor of 6."
+    ]
+  },{
+    "company": "NetApp - SolidFire",
+    "position": "Software Engineer",
+    "website": "http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx",
     "startDate": "2015-07-15",
+    "endDate": "2019-06-15",
+    "summary": "Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test engineer's pespective",
+    "highlights": [
+      "Led software test team in developing complex automated tests and test cases for core SolidFire product features in python and pytest",
+      "Scrum master, architect and product owner for re-architecture of internal legacy automation python code base", 
+      "Automated systems administration tasks such as system monitoring, report generation, code deployment, package management, and server maintenance",
+      "Designed and developed REST API SDK for external test case management software for use across multiple teams."
+    ]
+  },{
+    "company": "Southwest Research Institute",
+    "position": "Research Engineer",
+    "website": "http://swri.org",
+    "startDate": "2014-09-15",
+    "endDate": "2015-07-15",
+    "summary": "Continued standards developement and began taking leadership oppurtunities within the project space.",
+    "highlights": [
+      "Assisted in standards development for an Ethernet based communications architecture for US Army ground combat vehicles known as VICTORY",
+      "Software team lead for the Army’s Industry Network Integration Evaluation Demonstration to provide VICTORY Capabilities in an operational environment",
+      "Project Manager for a $50k internal research project to develop cost effective, micro embedded VICTORY adapters"
+    ]
+  },{
+    "company": "Southwest Research Institute",
+    "position": "Engineer",
+    "website": "http://swri.org",
+    "startDate": "2012-01-10",
+    "endDate": "2012-05-15",
+    "summary": "First position post gradudation. Worked to test and integrate C++ code base and real systems on vehicles.",
+    "highlights": [
+      "Led software validation experiments developing software components to demonstrate VICTORY Specifications.",
+      "Assisted in system integration for US Army field demo of situation awareness vehicle",
+      "Assistant project manager and engineer for a combat vehicle high performance video bus architecture."
+    ]
+  },{
+    "company": "XFAB",
+    "position": "Intern",
+    "website": "http://xfab.com",
+    "startDate": "2014-09-15",
+    "endDate": "2012-06-15",
     "summary": "Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise.",
     "highlights": [
-      "Led team to testing metadata expansion feature in storage product",
-      "Architected new value focused test framework in pure python", 
-      "System Architect helped rollout SAFe",
-      "DevOps Architect reduced circular 18hr build time to 4hrs"
+      "Led software validation experiments developing software components to demonstrate VICTORY Specifications.",
+      "Assisted in system integration for US Army field demo of situation awareness vehicle",
+      "Assistant project manager and engineer for a combat vehicle high performance video bus architecture."
     ]
-  }],
+  }
+
+
+],
   "volunteer": [{
-    "organization": "Organization",
+    "organization": "Historic Boulder",
     "position": "Volunteer",
-    "website": "http://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description...",
+    "website": "http://historicboulder.org/",
+    "startDate": "2019-11-10",
+    "summary": "Event volunteer and tech support volunteer",
+    "highlights": []
+  },{
+    "organization": "Alamo Regional Science Fair",
+    "position": "Volunteer Judge",
+    "website": "http://arase.org/",
+    "startDate": "2013-06-15",
+    "endDate": "2014-02-15",
+    "summary": "Volunteered at multiple science fairs judging Math, Engineering, and Computer Science projects.",
     "highlights": [
-      "Awarded 'Volunteer of the Month'"
     ]
   }],
   "education": [{
@@ -61,8 +115,9 @@
     "area": "Electrical Engineering",
     "studyType": "Bachelor",
     "endDate": "2012-05-08",
-    "gpa": "3.8",
+    "gpa": "Magna Cum Laude",
     "courses": [
+      "Mathematics -  Minor"
     ]
   }],
   "awards": [],
@@ -73,23 +128,26 @@
       "keywords": [
         "Python, C++, Bash",
         "Linux, OSX",
-        "Docker",
-        "Saltstack, Ansible, CloudFormation",
-        "DevOps",
-        "Kubernetes",
-        "VMWare/ESX, Hyper-V, Parallels",
-        "Continuous Integration/Deployment, Jenkins, TravisCI, GitLab CI"
+        "Docker, Swarm, Kubernetes",
+        "Saltstack, Ansible, Terraform",
+        "VMWare/ESX, Hyper-V, Parallels, Vagrant",
+        "Jenkins, TravisCI, GitLab CI"
       ]
+  },
+  {
+  "name": "Competencies",
+  "level": "Well enough",
+    "keywords": ["DevOps", "Value Stream", "Process Automation", "Web Services", "Open Standards",
+      "Software Testing", "Scaled Agile, SAFe", "System Architecture", "Storage Appliances", "Embedded Systems", "Software Integration", "Value Streams"
+    ]
   }],
   "languages": [{
     "language": "English",
     "fluency": "Native speaker"
   }],
-  "interests": [{
-    "name": "Hiking"
-  }],
+  "interests": [{"name": "Hiking"},{"name": "Baking"},{"name": "Pizza"},{"name": "My Dog"}
+  ],
   "references": [{
-    "name": "Doyle Dennis",
-    "reference": "..."
+    "name": "Available upon request"
   }]
 }
