@@ -28,11 +28,19 @@
     ]
   },
   "work": [{
+    "company": "CircleCI",
+    "position": "Community & Partner Engineer",
+    "website": "http://circleci.com",
+    "startDate": "2020-06-08",
+    "summary": "Working with customers in our open-source community to produce and maintain CircleCI ecosystem assets.",
+    "highlights": []
+  },{
     "company": "NetApp - SolidFire",
     "position": "Sr. Software Engineer",
     "website": "http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx",
     "startDate": "2019-06-15",
-    "summary": "Currently DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect",
+    "endDate": "2020-06-08",
+    "summary": "DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect",
     "highlights": [
       "Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.",
       "Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.",
