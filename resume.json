@@ -30,7 +30,7 @@
   "work": [{
     "company": "CircleCI",
     "position": "Community & Partner Engineer",
-    "website": "http://circleci.com",
+    "website": "http://circleci.dev",
     "startDate": "2020-06-08",
     "summary": "Working with customers in our open-source community to produce and maintain CircleCI ecosystem assets.",
     "highlights": []
@@ -40,7 +40,7 @@
     "website": "http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx",
     "startDate": "2019-06-15",
     "endDate": "2020-06-08",
-    "summary": "DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect",
+    "summary": "DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect.",
     "highlights": [
       "Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.",
       "Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.",
@@ -54,7 +54,7 @@
     "website": "http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx",
     "startDate": "2015-07-15",
     "endDate": "2019-06-15",
-    "summary": "Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test engineer's pespective",
+    "summary": "Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test automation engineer's pespective",
     "highlights": [
       "Led software test team in developing complex automated tests and test cases for core SolidFire product features in python and pytest",
       "Scrum master, architect and product owner for re-architecture of internal legacy automation python code base", 
@@ -69,7 +69,7 @@
     "endDate": "2015-07-15",
     "summary": "Continued standards developement and began taking leadership oppurtunities within the project space.",
     "highlights": [
-      "Assisted in standards development for an Ethernet based communications architecture for US Army ground combat vehicles known as VICTORY",
+      "Assisted in standards development for a SOAP / UDP-multicast / UDP-syslog based communications architecture for US Army ground combat vehicles known as VICTORY",
       "Software team lead for the Army’s Industry Network Integration Evaluation Demonstration to provide VICTORY Capabilities in an operational environment",
       "Project Manager for a $50k internal research project to develop cost effective, micro embedded VICTORY adapters"
     ]
@@ -79,7 +79,7 @@
     "website": "http://swri.org",
     "startDate": "2012-01-10",
     "endDate": "2014-09-15",
-    "summary": "First position post gradudation. Worked to test and integrate C++ code base and real systems on vehicles.",
+    "summary": "First position post graduation. Worked to test and integrate boost/libqt C++ code base and real systems on vehicles.",
     "highlights": [
       "Led software validation experiments developing software components to demonstrate VICTORY Specifications.",
       "Assisted in system integration for US Army field demo of situation awareness vehicle",
