@@ -27,7 +27,7 @@ jobs:
 
       - name: Deploy to gh-pages branch
         # only push to gh-pages if we're on the deploy branch
-        if:  ${{ github.ref == 'refs/head/deploy' }}
+        if:  ${{ github.ref == 'refs/heads/deploy' }}
         uses: dsayling/commit-branch-check-action@v0.0.8
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
