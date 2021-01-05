@@ -23,11 +23,9 @@ You need to [install docker](https://docs.docker.com/install/).
 * run the `./build` script
 * push to your github.io page repo
 
-## using travis-ci
+## using github actions
 
-Just register with travis-ci and it will do the heavy lifting.
-
-more options including publishing to their registry at http://jsonresume.org
+An actions workflow is already setup. Simply edit the `resume.json` and push, then the workflow simply builds the html file (so you dont have to). If you push, said change to the `resume.json` to a branch titled `deploy`, it will push the generated html file to the `gh-pages` branch. Simply modify the workflow if you'd like to deploy to or from a different branch.
 
 Thanks
 ======
