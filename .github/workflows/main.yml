@@ -16,7 +16,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: ./.github/actions/action
+      - uses: ./.github/actions/test
         with:
           who-to-greet: 'Testing'
       # Runs a single command using the runners shell
