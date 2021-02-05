@@ -17,5 +17,7 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
-    - run: ${{ github.action_path }}/goodbye.sh
-      shell: bash
+    - id: foo
+      uses: sormuras/hello-world-java-action@v1
+      with:
+        who-to-greet: 'Mona the Octocat'
