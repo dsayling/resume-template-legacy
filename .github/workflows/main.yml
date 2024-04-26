@@ -4,42 +4,35 @@ name: Publish resume in JSONResume format as Github Page
  
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main, test/* ]
 
 jobs:
-  check_run:
-    runs-on: ubuntu-latest
-    if: "! contains(github.event.head_commit.message, '[ci skip]')"
-    steps:
-      - run: echo "${{ github.event.head_commit.message }}"
 
   build:
     runs-on: ubuntu-latest
-    needs: check_run
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: checkout gh pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
       - uses: kelvintaywl/action-jsonresume-export@v1
         name: Export resume as HTML
         with:
-          theme: macchiato
+          theme: elegant
           resume_filepath: resume.json
           # modifies the index.html in-place
-          output_filepath: docs/index.html
-      - name: Commit published HTML
-        id: commit
+          output_filepath: gh-pages/index.html
+      - name: Sync files to pages branch
+        # update with other files you want to sync
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          if [ -n "$(git status --porcelain docs/index.html)" ]; then
-            git add docs/index.html
-            git commit -m "[ci skip] chore(docs/index.html): update resume page"
-            echo ::set-output name=exit_code::0
-          else
-            echo ::set-output name=exit_code::1
-          fi
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        if: steps.commit.outputs.exit_code == 0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          cp avatar.jpg gh-pages/avatar.jpg
+      - name: Commit and push HTML
+        working-directory: gh-pages
+        run: |
+          git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
+          git add -A
+          git commit -m "Update gh-pages with new report" || exit 0
+          git push origin gh-pages

@@ -1,34 +1,26 @@
-dockerized jsonresume
-=====================
+## jsonresume simple template
 
-[![Build Status](https://travis-ci.org/dsayling/resume.svg?branch=master)](https://travis-ci.org/dsayling/resume)
+Made with http://jsonresume.org and [this action](https://github.com/marketplace/actions/jsonresume-export)
 
-## want to make your own resume from JSON?
-
-Made with http://jsonresume.org
-
-I suggest hosting with [github pages](https://pages.github.com/) since it's easy.
+Hosts with [github pages](https://pages.github.com/) since it's easy.
 
 * just fork this repo
 * rename to username.github.io
-* clone and go!
+* clone, edit and push!
 
-You need to [install docker](https://docs.docker.com/install/).
 
-# guide
+## Guide
 
-* pick your [theme](https://jsonresume.org/themes/) and edit the Dockerfile with the theme; this uses [elegant](https://github.com/mudassir0909/jsonresume-theme-elegant)
- * update the `npm` package and the `-t` flag
-* fill in the resume.json
-* run the `./build` script
-* push to your github.io page repo
+[check out the action docs](https://github.com/marketplace/actions/jsonresume-export) for template instructions
 
-## using travis-ci
+I simplified the workflow and sepearated the gh-pages branch from main so you dont have to prevent the forever loop.
 
-Just register with travis-ci and it will do the heavy lifting.
 
-more options including publishing to their registry at http://jsonresume.org
+## Origins
 
-Thanks
-======
-Forked from https://github.com/BretFisher/resume
+- Originally forked from https://github.com/BretFisher/resume
+- Built the container myself using travis and then github
+- Eventually the CI wasn't working with older npm packages
+- Discovered jsonresume action that was created and simplified.
+
+
