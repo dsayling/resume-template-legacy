@@ -34,6 +34,7 @@ jobs:
           output_filepath: gh-pages/index.html
       - name: Commit published HTML
         id: commit
+        working-directory: gh-pages
         run: |
           git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
           git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
