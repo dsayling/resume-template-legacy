@@ -4,7 +4,7 @@ name: Publish resume in JSONResume format as Github Page
  
 on:
   push:
-    branches: [ master ]
+    branches: [ master, test/* ]
 
 jobs:
   check_run:
@@ -17,17 +17,25 @@ jobs:
     runs-on: ubuntu-latest
     needs: check_run
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+      - name: checkout gh pages branch
+        uses: actions/checkout@v4
+        if: always()
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
       - uses: kelvintaywl/action-jsonresume-export@v1
         name: Export resume as HTML
         with:
           theme: macchiato
           resume_filepath: resume.json
           # modifies the index.html in-place
-          output_filepath: docs/index.html
+          output_filepath: gh-pages/index.html
       - name: Commit published HTML
         id: commit
         run: |
+          cd gh-pages
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           if [ -n "$(git status --porcelain docs/index.html)" ]; then
@@ -42,4 +50,4 @@ jobs:
         if: steps.commit.outputs.exit_code == 0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          branch: gh-pages
