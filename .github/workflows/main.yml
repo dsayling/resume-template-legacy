@@ -1,35 +1,45 @@
-# This is a basic workflow to help you get started with Actions
+# example GitHub workflow
 
-name: CI
+name: Publish resume in JSONResume format as Github Page
+ 
+on:
+  push:
+    branches: [ master ]
 
-# Controls when the action will run. 
-on: [push]
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  check_run:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    if: "! contains(github.event.head_commit.message, '[ci skip]')"
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - run: echo "${{ github.event.head_commit.message }}"
+
+  build:
+    runs-on: ubuntu-latest
+    needs: check_run
+    steps:
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Build the image
-        run: |
-          docker build -t mynode -f Dockerfile .
-          docker create -ti --name dummy mynode bash
-          docker cp dummy:/build/index.html index.html
-          docker rm -f dummy
-
-      - name: Deploy to gh-pages branch
-        # only push to gh-pages if we're on the deploy branch
-        if:  ${{ github.ref == 'refs/heads/deploy' }}
-        uses: dsayling/commit-branch-check-action@v0.0.8
+      - uses: kelvintaywl/action-jsonresume-export@v1
+        name: Export resume as HTML
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: " Deploy ${{ github.repository }} gh-pages branch"
-          dest-branch: gh-pages
+          theme: macchiato
+          resume_filepath: resume.json
+          # modifies the index.html in-place
+          output_filepath: docs/index.html
+      - name: Commit published HTML
+        id: commit
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          if [ -n "$(git status --porcelain docs/index.html)" ]; then
+            git add docs/index.html
+            git commit -m "[ci skip] chore(docs/index.html): update resume page"
+            echo ::set-output name=exit_code::0
+          else
+            echo ::set-output name=exit_code::1
+          fi
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        if: steps.commit.outputs.exit_code == 0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
