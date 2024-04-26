@@ -22,15 +22,15 @@ jobs:
       - uses: kelvintaywl/action-jsonresume-export@v1
         name: Export resume as HTML
         with:
-          theme: relaxed
+          theme: stackoverflow
           resume_filepath: resume.json
           # modifies the index.html in-place
           output_filepath: gh-pages/index.html
-      - name: Commit published HTML
+      - name: Commit and push HTML
         working-directory: gh-pages
         run: |
           git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
           git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
           git add -A
-          git commit -m "Update gh-pages with new report" || echo "nothing to commit, working tree clean" && exit 0
+          git commit -m "Update gh-pages with new report" || exit 0
           git push origin gh-pages
