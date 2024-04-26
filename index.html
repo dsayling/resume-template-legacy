@@ -1,772 +1,1112 @@
 <!doctype html>
 <html>
-
-<head>
+  <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>Drew Ayling</title>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <style>/* Utils */
-/*----- Colors -----*/
-/*----- Fonts -----*/
-/*----- Dimensions and sizes -----*/
-/* Base */
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Josefin Sans Light'), local('JosefinSans-Light'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ecpl5te10k.ttf) format('truetype');
-}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+  <style>
+  /********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
 
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v14/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Lato Light Italic'), local('Lato-LightItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI9w2_Gwfo.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-v.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(https://fonts.gstatic.com/s/lato/v16/S6u_w4BMUTPHjxsI5wq_Gwfo.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Lato Light'), local('Lato-Light'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh7USSwiPHA.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPHA.ttf) format('truetype');
-}
-
-html {
-  background: white;
-}
-
-body {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  background: white;
-  margin: 50px 0 100px;
-  letter-spacing: .3px;
-  color: #39424B;
-}
-
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  text-transform: none;
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-h1 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 40px;
-  letter-spacing: 1px;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
-h2 {
-  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  letter-spacing: .5px;
+body {
+  line-height: 1;
 }
 
-h3 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 14px;
-  letter-spacing: .4px;
+ol,
+ul {
+  list-style: none;
 }
 
-h3.bold {
-  font-weight: 700;
+blockquote,
+q {
+  quotes: none;
 }
 
-h4 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 12px;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
 }
 
-h4.bold {
-  font-weight: 700;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-h5 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 300;
-  font-size: 11px;
-}
+/****************
+*	COMMONS
+****************/
 
-h5.italic {
-  font-style: italic;
-}
-
-h6 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+body,
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 13px;
+  color: #40484f;
   font-weight: 400;
-  font-size: 10px;
+  letter-spacing: 0;
+  line-height: 1.46153846;
+  text-align: left;
+}
+
+p {
+  display: block;
 }
 
 a {
-  color: inherit;
-  text-decoration: inherit;
+  color: #0095ff;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #2895F1;
+  color: #0c65a5;
+  text-decoration: underline;
 }
 
-a .fa-external-link {
-  font-size: 10px;
-  vertical-align: text-top;
-}
-
-p,
 li {
-  font-size: 11px;
+  list-style-type: square;
+  list-style-position: outside;
+  margin-left: 1.3em;
 }
 
-blockquote {
-  font-size: 11px;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-style: italic;
-  margin: 10px 25px;
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.67rem;
+}
+
+h3 {
+  font-size: 1.27rem;
 }
 
 em {
-  color: #999;
+  color: #757575;
 }
 
-ul {
-  margin: 10px 0 0;
-  -webkit-padding-start: 25px;
+blockquote {
+  margin-bottom: 1em;
 }
 
-ul li {
-  padding-left: 10px;
+strong {
+  font-weight: 700;
 }
 
-ul.minimal {
-  list-style: none;
+/* main container */
+
+#resume {
+  padding: 1.5rem;
+}
+
+/* every section wrapper */
+
+.section {
+  margin-bottom: 1rem;
+}
+
+section .location {
+  margin-right: 0.5em;
+  color: #606d76;
+  font-weight: 700;
+}
+
+#contact {
+  margin-top: 0.5rem;
+}
+
+#profiles .item {
   padding: 0;
 }
 
-ul.minimal li {
-  margin-bottom: 3px;
-  padding-left: 0;
+#header > #profiles,
+#header > #contact,
+#skills,
+#languages,
+#interests {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
 }
 
-ul.two-column {
-  -webkit-column-count: 2;
-  -webkit-column-gap: 28px;
-  column-count: 2;
-  column-gap: 28px;
+#header > div {
+  line-height: 1.5;
 }
 
-ul.two-column li {
-  padding-left: 0;
+#header > div > div {
+  margin-right: 1.2em;
 }
 
-@page {
-  size: A4;
+#header h1.name {
+  font-size: 2.8rem;
+  font-weight: 100;
+  line-height: 100%;
 }
 
-.container {
-  padding-top: 20px;
+#header h2.label {
+  color: #202931;
+  font-size: 1.47rem;
+  font-weight: 300;
 }
 
-.keyline {
-  width: 45px;
-  margin: 8px 0 10px;
-  border-top: 1px solid #56817A;
-}
-
-.pull-left {
-  float: left;
-}
-
-.pull-right {
+#header .image {
+  width: 11em;
   float: right;
+  border-radius: 4px;
 }
 
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+.main-summary {
+  background: #f1f8ff;
+  padding: 1.2em 1em;
+  margin-top: 1rem;
 }
 
-.profile-pic {
-  margin-top: -5px;
-  margin-right: 18px;
+.main-summary p {
+  margin: 0;
 }
 
-.profile-pic img {
-  height: 52px;
-  width: 52px;
-  border-radius: 50%;
-  border: 2px solid #56817A;
-}
-
-.summary {
-  margin: 5px 0 5px;
-}
-
-.sublink {
-  font-size: 70%;
-  font-weight: 200;
-  color: dimgray;
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-
-/* Layouts */
-.page {
-  background: white;
-  width: 612px;
-  min-height: 792px;
-  display: block;
-  margin: 0 auto;
-  border-top: 10px solid #56817A;
-  padding: 36px 22px 30px 34px;
-  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
-}
-
-.page:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.left-column {
-  float: left;
-  width: 160px;
-  margin-right: 20px;
-  word-wrap: break-word;
-}
-
-.right-column {
-  width: auto;
-  overflow: hidden;
-}
-
-.item {
-  margin-bottom: 15px;
-}
-
-.item:last-child {
-  margin-bottom: 0;
-}
-
-@media print {
-  body {
-    margin: 0;
-  }
-
-  .page {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 36px 0 30px;
-    box-shadow: none;
-  }
-
-  .page .resume-header,
-  .page .resume-content {
-    padding: 0 22px 0 34px;
-  }
-
-  .container {
-    page-break-inside: avoid;
-  }
-
-  .work-container .item {
-    page-break-inside: avoid;
-  }
-
-  .fa-external-link {
-    display: none;
-  }
-}
-
-/* Components */
-.info-tag-container {
-  margin-bottom: 5px;
-}
-
-.info-tag-container .fa {
-  font-size: 14px;
-  width: 12px;
-  margin-right: 5px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.info-tag-container .fa.fa-map-marker {
-  font-size: 16px;
-}
-
-.info-tag-container .fa.fa-mobile {
-  font-size: 18px;
-}
-
-.info-tag-container .fa.fa-envelope-o {
-  font-size: 12px;
-}
-
-.info-tag-container .fa.fa-desktop {
-  font-size: 11px;
-}
-
-.info-tag-container .fa.fa-external-link {
-  width: auto;
-  font-size: inherit;
-  vertical-align: text-top;
-}
-
-.info-tag-container .info-text {
-  font-size: 12px;
-  text-transform: none;
+.section-title {
   display: inline-block;
-  vertical-align: middle;
-  width: 139px;
+  background: #fff;
+  padding: 0 1em 0.3em 0;
+  color: #ff6d1f;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  font-size: 0.9rem;
 }
 
-.references-container .fa {
-  font-size: 14px;
+.section > header {
+  position: relative;
 }
 
-.education-container .location {
-  padding-bottom: 6px;
+.fa {
+  margin-right: 0.25em;
+}
+
+.section > header::after {
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  height: 1px;
+  background: #ccc;
+  content: "";
+  width: 100%;
+  z-index: -100;
+  display: block;
+}
+
+.section.main-summary > section {
+  margin: 0;
+}
+
+.section > section > header {
+  font-size: 1.38rem;
+  position: relative;
+  margin-top: 0.7em;
+}
+
+.section > section > header:first-of-type {
+  margin: 0;
+}
+
+.section > section > header .space-left {
+  position: absolute;
+  left: -1.56rem;
+  top: 5px;
+  color: #aaa;
+  line-height: 1;
+  opacity: 0;
+}
+
+.position,
+.company,
+.organization,
+.institution,
+.date,
+.area,
+.studyType,
+.title,
+.awarder {
+  display: inline;
+}
+
+.position,
+.studyType,
+.area,
+.title,
+.language,
+.name {
+  font-weight: 600;
+}
+
+.company::before,
+.institution::before,
+.organization::before,
+.awarder::before {
+  content: "at ";
+}
+
+.company,
+.institution,
+.organization,
+.awarder {
+  color: #606d76;
   font-weight: 400;
 }
 
-.education-container .specialization {
-  text-transform: none;
-  font-style: italic;
+.section header .date {
+  display: block;
+  font-size: 1rem;
+  padding: 0.1em 0;
+  color: #606d76;
+  font-weight: 400;
 }
 
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+.keywords,
+.courses {
+  margin: 0.5em 0;
 }
 
-.main-skill {
-  font-size: 80%;
+.keywords li,
+.courses li {
+  display: inline-block;
+  margin: 2px 2px 2px 0;
+  padding: 4px 5px 5px;
+  font-size: 0.9rem;
+  line-height: 1;
+  color: #3e6d8e;
+  background-color: #dfeaf1;
+  border: 0 solid #dfeaf1;
+  white-space: nowrap;
 }
 
-.skill {
-  margin: .15em;
-  padding: .15em;
-  background: ghostwhite;
-  border-radius: 5px;
+.keywords li:hover,
+.courses li:hover {
+  background: #dfeaf0;
 }
-</style>
-</head>
 
-<body>
-  <main id="resume" class="page">
-    <header class="resume-header clearfix">
-        <div class="profile-header pull-left">
-            <h1>Drew Ayling</h1>
-            <h2>DevOps Connoisseur, Python Enthusiast, System Architect</h2>
-        </div>
-        <div class="profile-pic pull-right">
-            <img src="avatar.jpg" alt="profile-pic">
-        </div>
-    </header>
-    <div class="resume-content">
-      <aside class="left-column">
-        <div class="container about-container">
-            <div class="title">
-                <h3>About</h3>
-                <div class="keyline"></div>
-            </div>
-                <div class="info-tag-container">
-                    <i class="fa fa-map-marker"></i>
-                
-                        <h6 class="info-text">Pearl Street Boulder Colorado CO 80301 US</h6>
-                </div>
-        
-        
-                <div class="info-tag-container">
-                    <i class="fa fa-envelope-o"></i>
-                
-                        <h6 class="info-text">
-                            <a href="mailto:dsayling@gmail.com" target="_blank">
-                                dsayling@gmail.com
-                            </a>
-                        </h6>
-                </div>
-        
-                <div class="info-tag-container">
-                    <i class="fa fa-mobile"></i>
-                
-                        <h6 class="info-text">+1 210-570-6481</h6>
-                </div>
-        
-                <div class="info-tag-container">
-                    <i class="fa fa-globe"></i>
-                
-                        <h6 class="info-text">
-                            <a href="TBD" target="_blank">
-                                TBD
-                            </a>
-                        </h6>
-                </div>
-        
-                                 <div class="info-tag-container">
-                                     <i class="fa fa-github"></i>
-                                 
-                                         <h6 class="info-text">
-                                             <a href="https://github.com/dsayling" target="_blank">
-                                                 dsayling
-                                             </a>
-                                         </h6>
-                                 </div>
-                                <div class="info-tag-container">
-                                    <i class="fa fa-linkedin-square"></i>
-                                
-                                        <h6 class="info-text">
-                                            <a href="https://www.linkedin.com/in/drew-ayling" target="_blank">
-                                                Drew Ayling
-                                            </a>
-                                        </h6>
-                                </div>
+.highlights {
+  margin: 1em 0 0 0;
+}
+
+.highlights > li > p {
+  margin-bottom: 0.5em;
+}
+
+.item {
+  overflow: hidden;
+}
+
+.gpa {
+  clear: both;
+  padding-bottom: 0.5em;
+}
+
+.fa.social {
+  font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+
+.google-plus {
+  color: #dd4b39;
+}
+
+.tumblr {
+  color: #32506d;
+}
+
+.foursquare {
+  color: #0072b1;
+}
+
+.facebook {
+  color: #3b5998;
+}
+
+.linkedin {
+  color: #007bb6;
+}
+
+.pinterest {
+  color: #cb2027;
+}
+
+.dribbble {
+  color: #ea4c89;
+}
+
+.instagram {
+  color: #517fa4;
+}
+
+.twitter {
+  color: #00aced;
+}
+
+.soundcloud {
+  color: #ff3a00;
+}
+
+.wordpress {
+  color: #21759b;
+}
+
+.youtube {
+  color: #bb0000;
+}
+
+.github {
+  color: #171515;
+}
+
+.stack-overflow {
+  color: #828386;
+  position: relative;
+}
+
+.flickr {
+  color: #ff0084;
+}
+
+.reddit {
+  color: #ff4500;
+}
+
+.hacker-news {
+  color: #ff6600;
+}
+
+.stack-overflow::after {
+  position: absolute;
+  left: 0;
+  content: "\f16c";
+  color: #f68a1f;
+  overflow: hidden;
+  height: 100%;
+}
+
+.telegram {
+  color: #2291c3;
+}
+
+#languages .item,
+#skills .item,
+#interests .item {
+  width: 15em;
+  padding: 0 0.5em 0.5em 0;
+  border-bottom: none;
+}
+
+#skills .item {
+  width: 16em;
+}
+
+#skills .item .keywords {
+  width: 15em;
+}
+
+/* Skill chart */
+
+.level {
+  margin-bottom: 0.5em;
+}
+
+.level em {
+  padding-left: 0.2em;
+}
+
+.level .bar {
+  border: 1px solid #ddd;
+  display: block;
+  width: 10em;
+  height: 5px;
+  position: relative;
+}
+
+.level .bar::after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  background: black;
+  height: 5px;
+}
+
+.level.beginner .bar::after {
+  background: #eb5f51;
+  width: 2.5em;
+}
+
+.level.intermediate .bar::after {
+  background: #ffdf1f;
+  width: 5em;
+}
+
+.level.advanced .bar::after,
+.level.fluent .bar::after {
+  background: #5cb85c;
+  width: 7.5em;
+}
+
+.level.master .bar::after,
+.level.native.speaker .bar::after {
+  background: #59c596;
+  width: 10em;
+}
+
+#references .item {
+  padding-left: 0.5em;
+  border-left: 5px solid #ff6d1f;
+}
+
+.section > section > section {
+  margin-bottom: 1rem;
+}
+
+/******************
+*	HELPER CLASSES
+******************/
+
+.clear::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.display {
+  display: block;
+  opacity: 1 !important;
+}
+
+/****************
+*		TABLET
+****************/
+
+@media screen and (min-width: 602px) {
+  #resume {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section header .date {
+    float: right;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+/****************
+*		LAPTOP
+****************/
+
+@media screen and (min-width: 1025px) {
+  li {
+    margin-left: 1.5em;
+  }
+  #resume {
+    width: 820px;
+    margin: 2rem auto;
+  }
+  .section > section > header .space-left {
+    opacity: 1;
+    cursor: pointer;
+  }
+  .section > section:not(.main-summary) {
+    margin-left: 1.67rem;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "| ";
+  }
+  .header-left {
+    float: left;
+    width: 70%;
+    word-break: normal;
+  }
+  .section header .date {
+    padding: 0.2em;
+  }
+  .display {
+    display: none;
+  }
+  .display:not(.none) {
+    display: block;
+  }
+}
+
+@media print {
+  #profiles a:not(.hide-href-print)::after{
+    content: " (" attr(href) ") ";
+  }
+  #resume {
+    margin: 0.1em;
+    padding: 0.1em;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 1.25;
+  }
+  @page {
+    margin: 1cm 1.4cm;
+  }
+  .item-count {
+    display: none;
+  }
+  .company::before,
+  .institution::before,
+  .organization::before,
+  .awarder::before {
+    content: "at ";
+  }
+  .main-summary {
+    padding: 0;
+    background: transparent;
+  }
+  .section {
+    margin: 0.8rem 0;
+    padding: 0;
+  }
+  .section header {
+    padding-bottom: 0.15rem;
+  }
+  .section .location {
+    padding-bottom: 0.15rem;
+  }
+  .section > section > section {
+    margin: 0 0 1em 0;
+  }
+  .section > section > section:last-of-type {
+    margin: 0;
+  }
+  .stack-overflow::after {
+    content: "";
+  }
+  .fa.social {
+    color: #828386;
+  }
+  ul {
+    margin-top: 0.4em;
+  }
+  ul,
+  li {
+    padding: 0;
+  }
+  ul.keywords li,
+  ul.courses li {
+    margin: 0;
+    padding: 0;
+    font-size: 0.8rem;
+    background: transparent;
+  }
+  ul.keywords li::after,
+  ul.courses li::after {
+    padding: 0 0 0 0.1rem;
+    content: " |";
+  }
+  ul.keywords::before,
+  ul.courses::before {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  #skills .item {
+    width: calc(100% / 3);
+    padding: 0;
+  }
+  .highlights {
+    margin: 0.5em 0 0 0;
+  }
+  ul.keywords::before {
+    content: "Skills acquired: ";
+  }
+  #skills .keywords::before {
+    content: none;
+  }
+  .section p {
+    margin: 0;
+    padding: 0;
+  }
+  ul.courses::before {
+    content: "Major courses: ";
+  }
+  ul.keywords li:last-of-type::after,
+  ul.courses li:last-of-type::after {
+    content: "";
+  }
+  .level em {
+    font-style: normal;
+    padding: 0.1em 0;
+  }
+  .level .bar {
+    display: none;
+  }
+  #profiles .item {
+    padding: 0;
+  }
+  .item.display {
+    display: block;
+    opacity: 1 !important;
+  }
+  .fa-map-marker-alt:before {
+    padding-left: 0.1em;
+  }
+}
+
+  </style>
+  
+  </head>
+  <body>
+  
+  <div id="resume">
+    	<header id="header" class="clear">
+    		<div>
+    			<h1 class="name">Drew Ayling</h1>
+    			<h2 class="label">DevOps Connoisseur, Python Enthusiast, System Architect</h2>
+    		</div>
+    
+    		<span class="location">
+    			<span class="address">123 Main St,</span>
+    			<span class="postalCode">80301,</span>
+    			<span class="city">Westminster,</span>
+    			<span class="region">Colorado</span>
+    			<span class="countryCode">US</span>
+    		</span>
+    
+    
+    		<div id="contact">
+    			<div class="website">
+    				<span class="fas fa-external-link-alt"></span>
+    				<a class="hide-href-print" target="_blank" target="_blank" href="TBD">TBD</a>
+    			</div>
+    			<div class="email">
+    				<span class="far fa-envelope"></span>
+    				<a class="hide-href-print" href="mailto:dsayling@gmail.com">dsayling@gmail.com</a>
+    			</div>
+    			<div class="phone">
+    				<span class="fas fa-mobile-alt"></span>
+    				<a class="hide-href-print" href="tel:+1 210-570-6481">+1 210-570-6481</a>
+    			</div>
+    		</div>
+    
+    		<div id="profiles">
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-github github social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://github.com/dsayling">dsayling</a>
+    					</span>
+    				</div>
+    			</div>
+    			<div class="item">
+    				<div class="username">
+    					<span class="fab fa-linkedin linkedin social"></span>
+    					<span class="url">
+    						<a target="_blank" href="https://www.linkedin.com/in/drew-ayling">Drew Ayling</a>
+    					</span>
+    				</div>
+    			</div>
+    		</div>
+    	</header>
+    
+    	<section class="section">
+    		<section class="main-summary">
+    			<div><p><p>Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in DevOps, Software Architecture, Automated Software Testing, Software Delivery, and Compliance Testing. Core values in product focused delivery and bridging communication gaps between development, quality, release, and support in Enterprise agile environments. Likes the feel of startups. macOS/Linux guy that runs WSL if I must. Python Developer that used to dabble in C++, Perl, and JS. DevOps is for the enterprise and for the developer. Believer in delivering value to customers, whether internal or external. I love spending my days helping people.</p></p></div>
+    		</section>
+    	</section>
+    
+    <section class="section">
+    	<header>
+    		<h2 class='section-title'>Skills</h2>
+    	</header>
+    	<section id="skills">
+    		<div class="item">
+    			<h3 class="name">
+    				Development
+    			</h3>
+    			 
+    			<div class="level well enough">
+    				<em>Well enough</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>Python, C++, Bash</li>
+    				<li>Linux, OSX</li>
+    				<li>Docker, Swarm, Kubernetes</li>
+    				<li>Saltstack, Ansible, Terraform</li>
+    				<li>VMWare/ESX, Hyper-V, Parallels, Vagrant</li>
+    				<li>Jenkins, TravisCI, GitLab CI</li>
+    			</ul>
+    		</div>
+    		<div class="item">
+    			<h3 class="name">
+    				Competencies
+    			</h3>
+    			 
+    			<div class="level well enough">
+    				<em>Well enough</em>
+    				<div class="bar"></div>
+    			</div>
+    			<ul class="keywords">
+    				<li>DevOps</li>
+    				<li>Value Stream</li>
+    				<li>Process Automation</li>
+    				<li>Web Services</li>
+    				<li>Open Standards</li>
+    				<li>Software Testing</li>
+    				<li>Scaled Agile, SAFe</li>
+    				<li>System Architecture</li>
+    				<li>Storage Appliances</li>
+    				<li>Embedded Systems</li>
+    				<li>Software Integration</li>
+    				<li>Value Streams</li>
+    			</ul>
+    		</div>
+    	</section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Work Experience <span class="item-count">(6)</span></h2>
+      </header>
+    
+      <section id="work">
+        <section class="work-item">
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p><p>Working with customers and partners in our open-source community to produce and maintain CircleCI ecosystem assets.</p></p></div>
+          </div>
         </section>
-            <div class="skills-container">
-                    <section class="container">
-                            <div class="title">
-                                <h3>Development</h3>
-                                <div class="keyline"></div>
-                            </div>                    <h4 class="bold capitalize">Well enough</h4>
-                            <div class="minimal flex-container">
-                                    <h6 class="main-skill skill">Python, C++, Bash</h6>
-                                    <h6 class="main-skill skill">Linux, OSX</h6>
-                                    <h6 class="main-skill skill">Docker, Swarm, Kubernetes</h6>
-                                    <h6 class="main-skill skill">Saltstack, Ansible, Terraform</h6>
-                                    <h6 class="main-skill skill">VMWare/ESX, Hyper-V, Parallels, Vagrant</h6>
-                                    <h6 class="main-skill skill">Jenkins, TravisCI, GitLab CI</h6>
-                            </div>
-                    </section>
-                    <section class="container">
-                            <div class="title">
-                                <h3>Competencies</h3>
-                                <div class="keyline"></div>
-                            </div>                    <h4 class="bold capitalize">Well enough</h4>
-                            <div class="minimal flex-container">
-                                    <h6 class="main-skill skill">DevOps</h6>
-                                    <h6 class="main-skill skill">Value Stream</h6>
-                                    <h6 class="main-skill skill">Process Automation</h6>
-                                    <h6 class="main-skill skill">Web Services</h6>
-                                    <h6 class="main-skill skill">Open Standards</h6>
-                                    <h6 class="main-skill skill">Software Testing</h6>
-                                    <h6 class="main-skill skill">Scaled Agile, SAFe</h6>
-                                    <h6 class="main-skill skill">System Architecture</h6>
-                                    <h6 class="main-skill skill">Storage Appliances</h6>
-                                    <h6 class="main-skill skill">Embedded Systems</h6>
-                                    <h6 class="main-skill skill">Software Integration</h6>
-                                    <h6 class="main-skill skill">Value Streams</h6>
-                            </div>
-                    </section>
+        <section class="work-item">
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p><p>DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.</p></p></li>
+              <li><p><p>Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.</p></p></li>
+              <li><p><p>Architected end to end container and Kubernetes based serverless testing solution for disparate disconnected system tests that removed hundreds of manual hours for each release.</p></p></li>
+              <li><p><p>Coached other system architects in scaled agile best practices to enable predictable planning by reducing lead time in exploration phase by 75%.</p></p></li>
+              <li><p><p>Architected organizational value stream alignment with other system architects and SAFe practitioners to restructure the teams around value in order to increase delivery to the customer by a factor of 6.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p><p>Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test automation engineer's pespective</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Led software test team in developing complex automated tests and test cases for core SolidFire product features in python and pytest</p></p></li>
+              <li><p><p>Scrum master, architect and product owner for re-architecture of internal legacy automation python code base</p></p></li>
+              <li><p><p>Automated systems administration tasks such as system monitoring, report generation, code deployment, package management, and server maintenance</p></p></li>
+              <li><p><p>Designed and developed REST API SDK for external test case management software for use across multiple teams.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p><p>Continued standards developement and began taking leadership oppurtunities within the project space.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Assisted in standards development for a SOAP / UDP-multicast / UDP-syslog based communications architecture for US Army ground combat vehicles known as VICTORY</p></p></li>
+              <li><p><p>Software team lead for the Army’s Industry Network Integration Evaluation Demonstration to provide VICTORY Capabilities in an operational environment</p></p></li>
+              <li><p><p>Project Manager for a $50k internal research project to develop cost effective, micro embedded VICTORY adapters</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p><p>First position post graduation. Worked to test and integrate boost/libqt C++ code base and real systems on vehicles.</p></p></div>
+            <ul class="highlights">
+              <li><p><p>Led software validation experiments developing software components to demonstrate VICTORY Specifications.</p></p></li>
+              <li><p><p>Assisted in system integration for US Army field demo of situation awareness vehicle</p></p></li>
+              <li><p><p>Assistant project manager and engineer for a combat vehicle high performance video bus architecture.</p></p></li>
+            </ul>
+          </div>
+        </section>
+        <section class="work-item">
+    
+           <div class="item" id="work-item">
+            <div class="summary"><p><p>High voltage and GaN substrate applied research</p></p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Volunteer</h2>
+      </header>
+      <section id="volunteer">
+        <section class="volunteer-item">
+    
+          <label for="volunteer-item-0"></label>
+    
+          <header class="clear">
+             <div class="date">
+              <span class="startDate">
+                Nov 2019
+              </span>
+              <span class="endDate">
+                - Current
+              </span>
             </div>
-            <div class="container languages-container">
-                <div class="title">
-                    <h3>Languages</h3>
-                    <div class="keyline"></div>
-                </div>
-                <ul class="minimal">
-                        <li>
-                            <h6>English <em>(Native speaker)</em></h6>
-                        </li>
-                </ul>
+            <div class="header-left">
+              <div class="position">
+                Volunteer
+              </div>
+              <div class="organization">
+                Historic Boulder
+              </div>
             </div>
-            <div class="container interests-container">
-                <div class="title">
-                    <h3>Interests</h3>
-                    <div class="keyline"></div>
-                </div>
-                    <section class="item">
-                            <h4 class="bold">Hiking</h4>
-                    </section>
-                    <section class="item">
-                            <h4 class="bold">Baking</h4>
-                    </section>
-                    <section class="item">
-                            <h4 class="bold">Pizza</h4>
-                    </section>
-                    <section class="item">
-                            <h4 class="bold">My Dog</h4>
-                    </section>
+           
+          </header>
+          <div class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://historicboulder.org/">http://historicboulder.org/</a>
+          </div>
+          <div class="item">
+            <div class="summary"><p><p>Event volunteer and tech support volunteer</p></p></div>
+          </div>
+        </section>
+        <section class="volunteer-item">
+    
+          <label for="volunteer-item-1"></label>
+    
+          <header class="clear">
+             <div class="date">
+              <span class="startDate">
+                Jun 2013
+              </span>
+              <span class="endDate">
+                - Feb 2014
+              </span>
             </div>
-      </aside>
-      <div class="right-column">
-                <div class="container summary-container">
-                    <div class="title">
-                        <h3>Summary</h3>
-                        <div class="keyline"></div>
-                    </div>            <p class="summary">
-                        Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in DevOps, Software Architecture, Automated Software Testing, Software Delivery, and Compliance Testing. Core values in product focused delivery and bridging communication gaps between development, quality, release, and support in Enterprise agile environments. Likes the feel of startups. macOS/Linux guy that runs WSL if I must. Python Developer that used to dabble in C++, Perl, and JS. DevOps is for the enterprise and for the developer. Believer in delivering value to customers, whether internal or external. I love spending my days helping people.
-                    </p>
-                </div>
-        <div class="container work-container">
-            <div class="title">
-                <h3>Experience</h3>
-                <div class="keyline"></div>
+            <div class="header-left">
+              <div class="position">
+                Volunteer Judge
+              </div>
+              <div class="organization">
+                Alamo Regional Science Fair
+              </div>
             </div>
-                <section class="item">
-                    <div class="section-header clearfix">
-                        <h3 class="bold pull-left">
-                                <a href="http://circleci.dev" target="_blank">
-                                    CircleCI
-                                </a>
-                        </h3>
-                        <h5 class="italic pull-right">
-                                <span class="startDate">06/2020</span>
-                                <span class="endDate"> - Present</span>
-                        </h5>
-                    </div>
-        
-                    <h4>Community &amp; Partner Engineer</h4>
-        
-        
-                    <p class="summary">Working with customers and partners in our open-source community to produce and maintain CircleCI ecosystem assets.</p>
-        
-                </section>
-                <section class="item">
-                    <div class="section-header clearfix">
-                        <h3 class="bold pull-left">
-                                <a href="http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx" target="_blank">
-                                    NetApp - SolidFire
-                                </a>
-                        </h3>
-                        <h5 class="italic pull-right">
-                                <span class="startDate">06/2019</span>
-                                <span class="endDate"> - 06/2020</span>
-                        </h5>
-                    </div>
-        
-                    <h4>Sr. Software Engineer</h4>
-        
-        
-                    <p class="summary">DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect.</p>
-        
-                    <ul>
-                        <li>Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.</li>
-                        <li>Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.</li>
-                        <li>Architected end to end container and Kubernetes based serverless testing solution for disparate disconnected system tests that removed hundreds of manual hours for each release.</li>
-                        <li>Coached other system architects in scaled agile best practices to enable predictable planning by reducing lead time in exploration phase by 75%.</li>
-                        <li>Architected organizational value stream alignment with other system architects and SAFe practitioners to restructure the teams around value in order to increase delivery to the customer by a factor of 6.</li>
-                    </ul>
-                </section>
-                <section class="item">
-                    <div class="section-header clearfix">
-                        <h3 class="bold pull-left">
-                                <a href="http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx" target="_blank">
-                                    NetApp - SolidFire
-                                </a>
-                        </h3>
-                        <h5 class="italic pull-right">
-                                <span class="startDate">07/2015</span>
-                                <span class="endDate"> - 06/2019</span>
-                        </h5>
-                    </div>
-        
-                    <h4>Software Engineer</h4>
-        
-        
-                    <p class="summary">Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test automation engineer&#x27;s pespective</p>
-        
-                    <ul>
-                        <li>Led software test team in developing complex automated tests and test cases for core SolidFire product features in python and pytest</li>
-                        <li>Scrum master, architect and product owner for re-architecture of internal legacy automation python code base</li>
-                        <li>Automated systems administration tasks such as system monitoring, report generation, code deployment, package management, and server maintenance</li>
-                        <li>Designed and developed REST API SDK for external test case management software for use across multiple teams.</li>
-                    </ul>
-                </section>
-                <section class="item">
-                    <div class="section-header clearfix">
-                        <h3 class="bold pull-left">
-                                <a href="http://swri.org" target="_blank">
-                                    Southwest Research Institute
-                                </a>
-                        </h3>
-                        <h5 class="italic pull-right">
-                                <span class="startDate">09/2014</span>
-                                <span class="endDate"> - 07/2015</span>
-                        </h5>
-                    </div>
-        
-                    <h4>Research Engineer</h4>
-        
-        
-                    <p class="summary">Continued standards developement and began taking leadership oppurtunities within the project space.</p>
-        
-                    <ul>
-                        <li>Assisted in standards development for a SOAP / UDP-multicast / UDP-syslog based communications architecture for US Army ground combat vehicles known as VICTORY</li>
-                        <li>Software team lead for the Army’s Industry Network Integration Evaluation Demonstration to provide VICTORY Capabilities in an operational environment</li>
-                        <li>Project Manager for a $50k internal research project to develop cost effective, micro embedded VICTORY adapters</li>
-                    </ul>
-                </section>
-                <section class="item">
-                    <div class="section-header clearfix">
-                        <h3 class="bold pull-left">
-                                <a href="http://swri.org" target="_blank">
-                                    Southwest Research Institute
-                                </a>
-                        </h3>
-                        <h5 class="italic pull-right">
-                                <span class="startDate">01/2012</span>
-                                <span class="endDate"> - 09/2014</span>
-                        </h5>
-                    </div>
-        
-                    <h4>Engineer</h4>
-        
-        
-                    <p class="summary">First position post graduation. Worked to test and integrate boost/libqt C++ code base and real systems on vehicles.</p>
-        
-                    <ul>
-                        <li>Led software validation experiments developing software components to demonstrate VICTORY Specifications.</li>
-                        <li>Assisted in system integration for US Army field demo of situation awareness vehicle</li>
-                        <li>Assistant project manager and engineer for a combat vehicle high performance video bus architecture.</li>
-                    </ul>
-                </section>
-                <section class="item">
-                    <div class="section-header clearfix">
-                        <h3 class="bold pull-left">
-                                <a href="http://xfab.com" target="_blank">
-                                    XFAB
-                                </a>
-                        </h3>
-                        <h5 class="italic pull-right">
-                                <span class="startDate">01/2012</span>
-                                <span class="endDate"> - 06/2012</span>
-                        </h5>
-                    </div>
-        
-                    <h4>Intern</h4>
-        
-        
-                    <p class="summary">High voltage and GaN substrate applied research</p>
-        
-                </section>
+           
+          </header>
+          <div class="website">
+            <span class="fas fa-external-link-alt"></span>
+            <a target="_blank" href="http://arase.org/">http://arase.org/</a>
+          </div>
+          <div class="item">
+            <div class="summary"><p><p>Volunteered at multiple science fairs judging Math, Engineering, and Computer Science projects.</p></p></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Education <span class="item-count">(1)</span></h2>
+      </header>
+    
+      <section id="education">
+        <section class="education-item">
+          <header class="clear">
+            <div class="date">
+              <span class="endDate">
+              - 2012
+              </span>
+            </div>
+            <div class="header-left">
+              <div class="studyType">
+                Bachelor
+              </div>
+              <div class="area">
+                Electrical Engineering
+              </div>
+              <div class="institution">
+                Texas Tech University
+              </div>
+            </div>
+          </header>
+    
+    
+          <ul class="courses">
+            <li>Mathematics -  Minor</li>
+          </ul>
+    
+          <div class="item">
+            <div class='gpa'>
+              <strong> Grade:</strong> <span>Magna Cum Laude</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>Languages</h2>
+      </header>
+      <section id="languages">
+        <div class="display">
+          <h3 class="language">
+            English
+          </h3>
+          <div class="item">
+            <div class="level fluency native speaker">
+              <em>Native speaker</em>
+              <div class="bar"></div>
+            </div>
+          </div>
         </div>
-        <div class="container education-container">
-            <div class="title">
-            <h3>Education</h3>
-            <div class="keyline"></div>
-        </div> 
-            <section class="item">
-                <div class="section-header clearfix">
-            <h3 class="bold pull-left">
-                    Texas Tech University
-            </h3>
-            <h5 class="italic pull-right">
-            </h5>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title' class='section-title'>Interests</h2>
+      </header>
+      <section id="interests">
+        <div class="item">
+          <h3 class="name">
+            Hiking
+          </h3>
         </div>
-         
-                <h4>Bachelor Electrical Engineering</h4>
-        
-                <h5>Magna Cum Laude</h5>
-                  
-                <ul class="two-column">
-                    <li>Mathematics -  Minor</li>
-                </ul>
-            </section>
+        <div class="item">
+          <h3 class="name">
+            Baking
+          </h3>
         </div>
-        <div class="container volunteer-container">
-            <div class="title">
-                <h3>Volunteer</h3>
-                <div class="keyline"></div>
-            </div>
-            <section class="item">
-                <div class="section-header clearfix">
-                    <h3 class="bold pull-left">
-                            <a href="http://historicboulder.org/" target="_blank">
-                                Historic Boulder
-                                    <span class="sublink">∙ <a href="http://historicboulder.org/" target="_blank" class="sublink">http://historicboulder.org/</a></span>
-                            </a>
-                    </h3>
-                    <h5 class="italic pull-right">
-                            <span class="startDate">11/2019</span>
-                            <span class="endDate"> - Present</span>
-                    </h5>
-                </div>
-                <h5>Volunteer</h5>
-        
-                <p class="summary">Event volunteer and tech support volunteer</p>
-        
-            </section>
-            <section class="item">
-                <div class="section-header clearfix">
-                    <h3 class="bold pull-left">
-                            <a href="http://arase.org/" target="_blank">
-                                Alamo Regional Science Fair
-                                    <span class="sublink">∙ <a href="http://arase.org/" target="_blank" class="sublink">http://arase.org/</a></span>
-                            </a>
-                    </h3>
-                    <h5 class="italic pull-right">
-                            <span class="startDate">06/2013</span>
-                            <span class="endDate"> - 02/2014</span>
-                    </h5>
-                </div>
-                <h5>Volunteer Judge</h5>
-        
-                <p class="summary">Volunteered at multiple science fairs judging Math, Engineering, and Computer Science projects.</p>
-        
-            </section>
+        <div class="item">
+          <h3 class="name">
+            Pizza
+          </h3>
         </div>
-        <div class="container references-container">
-            <div class="title">
-                <h3>References</h3>
-                <div class="keyline"></div>
-            </div>
-                <section class="item clearfix">
-        
-                    <h5 class="pull-right"> — Available upon request</h5>
-                </section>
+        <div class="item">
+          <h3 class="name">
+            My Dog
+          </h3>
         </div>
-      </div>
-    </div>
-  </main>
-</body>
+      </section>
+    </section>
+    <section class="section">
+      <header>
+        <h2 class='section-title'>References</h2>
+      </header>
+      <section id="references">
+        <div class="item">
+          <div class="name">
+            Available upon request
+          </div>
+        </div>
+      </section>
+    </section>
 
+  </body>
 </html>
