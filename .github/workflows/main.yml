@@ -34,10 +34,10 @@ jobs:
           output_filepath: gh-pages/index.html
       - name: Commit published HTML
         id: commit
+        working-directory: gh-pages
         run: |
-          cd gh-pages
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
+          git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
           git add index.html
           git commit -m "chore(gh-pages/index.html): update resume page"
           git push origin gh-pages
