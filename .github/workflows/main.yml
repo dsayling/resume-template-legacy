@@ -24,6 +24,10 @@ jobs:
           resume_filepath: resume.json
           # modifies the index.html in-place
           output_filepath: gh-pages/index.html
+      - name: Sync files to pages branch
+        # update with other files you want to sync
+        run: |
+          cp avatar.jpg gh-pages/avatar.jpg
       - name: Commit and push HTML
         working-directory: gh-pages
         run: |
