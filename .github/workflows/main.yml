@@ -7,15 +7,9 @@ on:
     branches: [ master, test/* ]
 
 jobs:
-  check_run:
-    runs-on: ubuntu-latest
-    if: "! contains(github.event.head_commit.message, '[ci skip]')"
-    steps:
-      - run: echo "${{ github.event.head_commit.message }}"
 
   build:
     runs-on: ubuntu-latest
-    needs: check_run
     steps:
       - uses: actions/checkout@v4
       - name: checkout gh pages branch
@@ -33,20 +27,10 @@ jobs:
           # modifies the index.html in-place
           output_filepath: gh-pages/index.html
       - name: Commit published HTML
-        id: commit
         working-directory: gh-pages
         run: |
           git config --global user.name "$(git --no-pager log --format=format:'%an' -n 1)"
           git config --global user.email "$(git --no-pager log --format=format:'%ae' -n 1)"
-          if [ -n "$(git status --porcelain index.html)" ]; then
-            git add index.html
-            git commit -m "[ci skip] chore(docs/index.html): update resume page"
-            echo "exit_code=0" >> $GITHUB_OUTPUT
-          else
-            echo "exit_code=1" >> $GITHUB_OUTPUT
-          fi
-      - name: Push changes
-        working-directory: gh-pages
-        if: steps.commit.outputs.exit_code == 0
-        run: |
+          git add -A
+          git commit -m "Update gh-pages with new report" || echo "nothing to commit, working tree clean" && exit 0
           git push origin gh-pages
