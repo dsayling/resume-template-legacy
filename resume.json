@@ -1,158 +1,93 @@
 {
   "basics": {
-    "name": "Drew Ayling",
-    "label": "DevOps Connoisseur, Python Enthusiast, System Architect",
-    "picture": "avatar.jpg",
-    "email": "dsayling@gmail.com",
-    "phone": "+1 210-570-6481",
-    "website": "TBD",
-    "summary": "Experienced Software Engineer with a demonstrated history of working in the information technology and services industry. Skilled in DevOps, Software Architecture, Automated Software Testing, Software Delivery, and Compliance Testing. Core values in product focused delivery and bridging communication gaps between development, quality, release, and support in Enterprise agile environments. Likes the feel of startups. macOS/Linux guy that runs WSL if I must. Python Developer that used to dabble in C++, Perl, and JS. DevOps is for the enterprise and for the developer. Believer in delivering value to customers, whether internal or external. I love spending my days helping people.",
+    "name": "John Doe",
+    "label": "Programmer",
+    "picture": "",
+    "email": "john@gmail.com",
+    "phone": "(912) 555-4321",
+    "website": "http://johndoe.com",
+    "summary": "A summary of John Doe...",
     "location": {
-      "address": "123 Main St",
-      "postalCode": "80301",
-      "city": "Westminster",
+      "address": "2712 Broadway St",
+      "postalCode": "CA 94115",
+      "city": "San Francisco",
       "countryCode": "US",
-      "region": "Colorado"
+      "region": "California"
     },
-    "profiles": [
-      {
-        "network": "GitHub",
-        "username": "dsayling",
-        "url": "https://github.com/dsayling"
-      },
-      {
-        "network": "LinkedIn",
-        "username": "Drew Ayling",
-        "url": "https://www.linkedin.com/in/drew-ayling"
-      }
-    ]
+    "profiles": [{
+      "network": "Twitter",
+      "username": "john",
+      "url": "http://twitter.com/john"
+    }]
   },
   "work": [{
-    "company": "CircleCI",
-    "position": "Community & Partner Engineer",
-    "website": "http://circleci.dev",
-    "startDate": "2020-06-08",
-    "summary": "Working with customers and partners in our open-source community to produce and maintain CircleCI ecosystem assets.",
-    "highlights": []
-  },{
-    "company": "NetApp - SolidFire",
-    "position": "Sr. Software Engineer",
-    "website": "http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx",
-    "startDate": "2019-06-15",
-    "endDate": "2020-06-08",
-    "summary": "DevOps Architect for the NetApp/SoldFire AFA and HCI product. Automation Architect.",
+    "company": "Company",
+    "position": "President",
+    "website": "http://company.com",
+    "startDate": "2013-01-01",
+    "endDate": "2014-01-01",
+    "summary": "Description...",
     "highlights": [
-      "Architected transition of 1000+ test cases from legacy framework to new automated CI driven testing framework.",
-      "Architected new continuous integration and delivery process to parallelize system value delivery, remove circular dependencies and decreased build and test time by a factor of 4.",
-      "Architected end to end container and Kubernetes based serverless testing solution for disparate disconnected system tests that removed hundreds of manual hours for each release.",
-      "Coached other system architects in scaled agile best practices to enable predictable planning by reducing lead time in exploration phase by 75%.",
-      "Architected organizational value stream alignment with other system architects and SAFe practitioners to restructure the teams around value in order to increase delivery to the customer by a factor of 6."
+      "Started the company"
     ]
-  },{
-    "company": "NetApp - SolidFire",
-    "position": "Software Engineer",
-    "website": "http://netapp.com/us/products/storage-systems/all-flash-array/solidfire-scale-out.aspx",
-    "startDate": "2015-07-15",
-    "endDate": "2019-06-15",
-    "summary": "Started at SolidFire pre-acquisition, seeing the changes of small start-up to large enterprise from a test automation engineer's pespective",
-    "highlights": [
-      "Led software test team in developing complex automated tests and test cases for core SolidFire product features in python and pytest",
-      "Scrum master, architect and product owner for re-architecture of internal legacy automation python code base", 
-      "Automated systems administration tasks such as system monitoring, report generation, code deployment, package management, and server maintenance",
-      "Designed and developed REST API SDK for external test case management software for use across multiple teams."
-    ]
-  },{
-    "company": "Southwest Research Institute",
-    "position": "Research Engineer",
-    "website": "http://swri.org",
-    "startDate": "2014-09-15",
-    "endDate": "2015-07-15",
-    "summary": "Continued standards developement and began taking leadership oppurtunities within the project space.",
-    "highlights": [
-      "Assisted in standards development for a SOAP / UDP-multicast / UDP-syslog based communications architecture for US Army ground combat vehicles known as VICTORY",
-      "Software team lead for the Army’s Industry Network Integration Evaluation Demonstration to provide VICTORY Capabilities in an operational environment",
-      "Project Manager for a $50k internal research project to develop cost effective, micro embedded VICTORY adapters"
-    ]
-  },{
-    "company": "Southwest Research Institute",
-    "position": "Engineer",
-    "website": "http://swri.org",
-    "startDate": "2012-01-10",
-    "endDate": "2014-09-15",
-    "summary": "First position post graduation. Worked to test and integrate boost/libqt C++ code base and real systems on vehicles.",
-    "highlights": [
-      "Led software validation experiments developing software components to demonstrate VICTORY Specifications.",
-      "Assisted in system integration for US Army field demo of situation awareness vehicle",
-      "Assistant project manager and engineer for a combat vehicle high performance video bus architecture."
-    ]
-  },{
-    "company": "XFAB",
-    "position": "Intern",
-    "website": "http://xfab.com",
-    "startDate": "2012-01-15",
-    "endDate": "2012-06-15",
-    "summary": "High voltage and GaN substrate applied research",
-    "highlights": [
-    ]
-  }
-
-
-],
+  }],
   "volunteer": [{
-    "organization": "Historic Boulder",
+    "organization": "Organization",
     "position": "Volunteer",
-    "website": "http://historicboulder.org/",
-    "startDate": "2019-11-10",
-    "summary": "Event volunteer and tech support volunteer",
-    "highlights": []
-  },{
-    "organization": "Alamo Regional Science Fair",
-    "position": "Volunteer Judge",
-    "website": "http://arase.org/",
-    "startDate": "2013-06-15",
-    "endDate": "2014-02-15",
-    "summary": "Volunteered at multiple science fairs judging Math, Engineering, and Computer Science projects.",
+    "website": "http://organization.com/",
+    "startDate": "2012-01-01",
+    "endDate": "2013-01-01",
+    "summary": "Description...",
     "highlights": [
+      "Awarded 'Volunteer of the Month'"
     ]
   }],
   "education": [{
-    "institution": "Texas Tech University",
-    "area": "Electrical Engineering",
+    "institution": "University",
+    "area": "Software Development",
     "studyType": "Bachelor",
-    "endDate": "2012-05-08",
-    "gpa": "Magna Cum Laude",
+    "startDate": "2011-01-01",
+    "endDate": "2013-01-01",
+    "gpa": "4.0",
     "courses": [
-      "Mathematics -  Minor"
+      "DB1101 - Basic SQL"
     ]
   }],
-  "awards": [],
-  "publications": [],
+  "awards": [{
+    "title": "Award",
+    "date": "2014-11-01",
+    "awarder": "Company",
+    "summary": "There is no spoon."
+  }],
+  "publications": [{
+    "name": "Publication",
+    "publisher": "Company",
+    "releaseDate": "2014-10-01",
+    "website": "http://publication.com",
+    "summary": "Description..."
+  }],
   "skills": [{
-    "name": "Development",
-    "level": "Well enough",
-      "keywords": [
-        "Python, C++, Bash",
-        "Linux, OSX",
-        "Docker, Swarm, Kubernetes",
-        "Saltstack, Ansible, Terraform",
-        "VMWare/ESX, Hyper-V, Parallels, Vagrant",
-        "Jenkins, TravisCI, GitLab CI"
-      ]
-  },
-  {
-  "name": "Competencies",
-  "level": "Well enough",
-    "keywords": ["DevOps", "Value Stream", "Process Automation", "Web Services", "Open Standards",
-      "Software Testing", "Scaled Agile, SAFe", "System Architecture", "Storage Appliances", "Embedded Systems", "Software Integration", "Value Streams"
+    "name": "Web Development",
+    "level": "Master",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "Javascript"
     ]
   }],
   "languages": [{
     "language": "English",
     "fluency": "Native speaker"
   }],
-  "interests": [{"name": "Hiking"},{"name": "Baking"},{"name": "Pizza"},{"name": "My Dog"}
-  ],
+  "interests": [{
+    "name": "Wildlife",
+    "keywords": [
+      "Ferrets",
+      "Unicorns"
+    ]
+  }],
   "references": [{
-    "name": "Available upon request"
+    "name": "Jane Doe",
+    "reference": "Reference..."
   }]
 }
